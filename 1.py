@@ -132,7 +132,7 @@ def main():
             'sex': "2",
 
             'field_names[4]': "reg_passwd__",
-            'encpass': f"#PWD_BROWSER:0:{int(time.time())}:MrCode@123",
+            'encpass': f"#PWD_BROWSER:0:{int(time.time())}:ahmantap1",
 
             'submit': "Sign Up",
 
@@ -217,8 +217,8 @@ def confirm(uid, mail, otp, ses):
             return
 
         ck = ";".join([f"{k}={v}" for k,v in ses.cookies.get_dict().items()])
-        print(f"{X} OK - {G}{uid}|PARADISE123|{ck}")
-        open("/data/data/com.termux/files/home/storage/shared/PARADISE/FB-OK.txt","a").write(f"{uid}|PARADISE123@123|{ck}\n")
+        print(f"{X} OK - {G}{uid}|ahmantap1|{ck}")
+        open('/storage/emulated/0/PARADISE/ahmantap1.txt","a").write(f"{uid}|ahmantap1|{ck}\n")
         linex()
 
     except Exception:
