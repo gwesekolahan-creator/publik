@@ -218,7 +218,7 @@ def confirm(uid, mail, otp, ses):
 
         ck = ";".join([f"{k}={v}" for k,v in ses.cookies.get_dict().items()])
         print(f"{X} OK - {G}{uid}|ahmantap1|{ck}")
-        open('/storage/emulated/0/PARADISE/ahmantap1.txt","a").write(f"{uid}|ahmantap1|{ck}\n")
+        open("/storage/emulated/0/PARADISE/ahmantap1.txt","a").write(f"{uid}|ahmantap1|{ck}\n")
         linex()
 
     except Exception:
